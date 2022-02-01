@@ -1,1 +1,1 @@
- 
+const readLine = require('readline-sync'); //readLine-sync
