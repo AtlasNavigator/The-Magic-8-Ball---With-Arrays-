@@ -5,4 +5,30 @@ let possibilities = ["As I see it, yes", "It is certain", "It is decidedly so", 
 // The random generator choosing items from the array above
 let randomChoice = possibilities[Math.floor(Math.random(19)*possibilities.length)];
 
-console.log(randomChoice); //Log the output to the console
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+function magic8Ball(){
+  console.log(` Welcome to:
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▀▄░█░▄▄▀█░▄▄▄██▄██▀▄▀███▀▄▄▀████░▄▄▀█░▄▄▀█░██░█
+██░█░█░█░▀▀░█░█▄▀██░▄█░█▀███▀▄▄▀████░▄▄▀█░▀▀░█░██░█
+██░███░█▄██▄█▄▄▄▄█▄▄▄██▄████▄▀▀▄████░▀▀░█▄██▄█▄▄█▄▄
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ `);
+let name= (readLine.question('What is your name: '));
+let question= (readLine.question(`Hello ${name}, what is your question: `));
+console.clear();
+console.log(`
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▀▄░█░▄▄▀█░▄▄▄██▄██▀▄▀███▀▄▄▀████░▄▄▀█░▄▄▀█░██░█
+██░█░█░█░▀▀░█░█▄▀██░▄█░█▀███▀▄▄▀████░▄▄▀█░▀▀░█░██░█
+██░███░█▄██▄█▄▄▄▄█▄▄▄██▄████▄▀▀▄████░▀▀░█▄██▄█▄▄█▄▄
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀`);
+console.log('Please await your answer...')
+sleep(2000).then(() => {
+  console.log(randomChoice);
+})
+};
+
+
+magic8Ball();
