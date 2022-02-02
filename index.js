@@ -28,8 +28,10 @@ console.log(`
 console.log('Please await your answer...')
 sleep(2000).then(() => {
   console.log(randomChoice);
-  console.log(`Thank you for participating, ${name}, have a lovely day! :D`)
-}) //Pause the code for 2 seconds and then log the following text to the console.
+  sleep(500).then(() => {
+  console.log(`Thank you for participating, ${name}, have a lovely day! :D`);
+});
+}); //Pause the code for 2 seconds and then log the following text to the console.
 };
 
 magic8Ball(); //Execute the magic 8 ball script
