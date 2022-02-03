@@ -33,7 +33,7 @@ if (language == 1){
 });
 }else{ //Display error if input does not equal 1 or 2
 console.clear();
-console.log(` Welcome to:
+console.log(`
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 ██░▄▀▄░█░▄▄▀█░▄▄▄██▄██▀▄▀███▀▄▄▀████░▄▄▀█░▄▄▀█░██░█
 ██░█░█░█░▀▀░█░█▄▀██░▄█░█▀███▀▄▄▀████░▄▄▀█░▀▀░█░██░█
