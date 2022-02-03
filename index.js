@@ -19,26 +19,33 @@ console.log(` Welcome to:
 ██░█░█░█░▀▀░█░█▄▀██░▄█░█▀███▀▄▄▀████░▄▄▀█░▀▀░█░██░█
 ██░███░█▄██▄█▄▄▄▄█▄▄▄██▄████▄▀▀▄████░▀▀░█▄██▄█▄▄█▄▄
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀™ `);
-let language = readLine.question('English or Español (1/2) ');
-if (language == '1'){
+let language = Number(readLine.question('English or Español (1/2) '));
+if (language == 1){
   console.clear();
   sleep(500).then(() => {
   english();
 });
   
-} else if (language == '2') {
+} else if (language == 2) {
   console.clear();
   sleep(500).then(() => {
   spanish();
 });
-}else
+}else{ //Display error if input does not equal 1 or 2
 console.clear();
-console.log(`Please input 1 or 2 for language. Porfavor ponga 1 o 2 correspondiendo con su lenguaje.`);
-console.log(`Please try again. Porfavor intente de nuevo.`)
-  sleep(3000).then(() => {
+console.log(` Welcome to:
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▀▄░█░▄▄▀█░▄▄▄██▄██▀▄▀███▀▄▄▀████░▄▄▀█░▄▄▀█░██░█
+██░█░█░█░▀▀░█░█▄▀██░▄█░█▀███▀▄▄▀████░▄▄▀█░▀▀░█░██░█
+██░███░█▄██▄█▄▄▄▄█▄▄▄██▄████▄▀▀▄████░▀▀░█▄██▄█▄▄█▄▄
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀™ `);
+console.log(`Please input 1 or 2 for language. | Porfavor ponga 1 o 2 correspondiendo con su lenguaje.`);//error
+console.log(`Please try again | Porfavor intente de nuevo.`) 
+  sleep(3300).then(() => { //Wait 3.3 seconds, clear console, and ask again
   console.clear();
   magic8Ball();
   });
+  };
 };
 
 function english(){ //8 ball in English
